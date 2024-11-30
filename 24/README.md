@@ -28,7 +28,7 @@ The languages after the line are sorted (rougly) inversely w/r/t difficulty and 
 1. Lua
 1. Perl
 1. Ruby
-1. JavaScript
+1. TypeScript
 1. Java
 1. C++
 1. Python
