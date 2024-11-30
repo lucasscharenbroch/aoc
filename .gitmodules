@@ -1,0 +1,3 @@
+[submodule "23"]
+	path = 23
+	url = https://github.com/lucasscharenbroch/aoc-23.git
