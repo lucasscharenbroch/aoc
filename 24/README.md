@@ -4,8 +4,8 @@ This year's challenge is to use a different language every day (choosing from th
 The goal is to find the best fitting language in order to write maximally concise and readable code (while also using a wide spread of languages).
 Learning new languages/language features is not the primary goal, but it's a likely side-effect (considering the fact I haven't used all of these languages).
 
-As days pass, the languages below the horizontal line match the actual choice for that day.
-The languages after the line are sorted (rougly) inversely w/r/t difficulty and generality (factoring in my familiarity with them).
+As days pass, the languages above the horizontal line match the actual choice for that day.
+The languages below the line are sorted (rougly) inversely w/r/t difficulty and generality (factoring in my familiarity with them).
 
 1. APL
 
