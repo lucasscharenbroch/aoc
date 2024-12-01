@@ -7,6 +7,8 @@ Learning new languages/language features is not the primary goal, but it's a lik
 As days pass, the languages below the horizontal line match the actual choice for that day.
 The languages after the line are sorted (rougly) inversely w/r/t difficulty and generality (factoring in my familiarity with them).
 
+1. APL
+
 ---
 
 1. AWK
@@ -14,7 +16,6 @@ The languages after the line are sorted (rougly) inversely w/r/t difficulty and 
 1. Bash
 1. Forth
 1. Prolog
-1. APL
 1. R
 1. Julia
 1. Smalltalk
