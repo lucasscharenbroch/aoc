@@ -1,3 +1,6 @@
+3:
+	./3.plx
+
 2:
 	cat 2.input | runhaskell 2.hs
 

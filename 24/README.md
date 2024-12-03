@@ -9,6 +9,7 @@ The languages below the line are sorted (rougly) inversely w/r/t difficulty and 
 
 1. APL
 1. Haskell
+1. Perl
 
 ---
 
@@ -28,7 +29,6 @@ The languages below the line are sorted (rougly) inversely w/r/t difficulty and 
 1. Scala
 1. C
 1. Lua
-1. Perl
 1. Ruby
 1. TypeScript
 1. Java
