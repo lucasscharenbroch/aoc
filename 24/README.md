@@ -8,6 +8,7 @@ As days pass, the languages above the horizontal line match the actual choice fo
 The languages below the line are sorted (rougly) inversely w/r/t difficulty and generality (factoring in my familiarity with them).
 
 1. APL
+1. Haskell
 
 ---
 
@@ -33,5 +34,4 @@ The languages below the line are sorted (rougly) inversely w/r/t difficulty and 
 1. Java
 1. C++
 1. Python
-1. Haskell
 1. Rust
