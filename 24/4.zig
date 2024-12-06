@@ -32,58 +32,41 @@ pub fn main() !void {
     var buf: [1024][1024]u8 = undefined;
     var lens: [1024]usize = undefined;
     while (try in_stream.readUntilDelimiterOrEof(&buf[x], '\n')) |line| {
-        std.debug.print("{s}\n", .{line});
         lens[x] = line.len;
         x += 1;
     }
 
     // In a higher-level language, I would place the rows, cols, and diagonals
     // each in their own string arrays, then count forwards and backwards.
+    // (hoped to do this in zig, but it turns out to be more low-level then I thought)
     // We'll use the buggier alternative here.
 
     const n = lens[0]; // assume all same length
     var res: usize = 0;
 
-    for (0..n) |i| {
-        for (0..n) |j| {
-            // left
-            if (j >= 3) {
-                res += if (xmas(buf[i][j], buf[i][j - 1], buf[i][j - 2], buf[i][j - 3])) 1 else 0;
+    const d = [_]i32{-1, 0, 1}; // can't do this with ranges?
 
-                // up-left
-                if (i >= 3) {
-                    res += if (xmas(buf[i][j], buf[i - 1][j - 1], buf[i - 2][j - 2], buf[i - 3][j - 3])) 1 else 0;
+    for (d) |di| {
+        for (d) |dj| {
+            const lo_i: usize = switch(di) { -1 => 3, else => 0};
+            const hi_i: usize = switch(di) { 1 => n - 3, else => n};
+            const lo_j: usize = switch(dj) { -1 => 3, else => 0};
+            const hi_j: usize = switch(dj) { 1 => n - 3, else => n};
+
+            for (lo_i..hi_i) |i_usize| {
+                for (lo_j..hi_j) |j_usize| {
+                    const i: i32 = @intCast(i_usize);
+                    const j: i32 = @intCast(j_usize);
+
+                    res += if (
+                        xmas(
+                            buf[@intCast(i + 0 * di)][@intCast(j + 0 * dj)],
+                            buf[@intCast(i + 1 * di)][@intCast(j + 1 * dj)],
+                            buf[@intCast(i + 2 * di)][@intCast(j + 2 * dj)],
+                            buf[@intCast(i + 3 * di)][@intCast(j + 3 * dj)]
+                        )
+                    ) 1 else 0;
                 }
-
-                // down-left
-                if (i + 3 < n) {
-                    res += if (xmas(buf[i][j], buf[i + 1][j - 1], buf[i + 2][j - 2], buf[i + 3][j - 3])) 1 else 0;
-                }
-            }
-
-            // right
-            if (j + 3 < n) {
-                res += if (xmas(buf[i][j], buf[i][j + 1], buf[i][j + 2], buf[i][j + 3])) 1 else 0;
-
-                // up-right
-                if (i >= 3) {
-                    res += if (xmas(buf[i][j], buf[i - 1][j + 1], buf[i - 2][j + 2], buf[i - 3][j + 3])) 1 else 0;
-                }
-
-                // down-right
-                if (i + 3 < n) {
-                    res += if (xmas(buf[i][j], buf[i + 1][j + 1], buf[i + 2][j + 2], buf[i + 3][j + 3])) 1 else 0;
-                }
-            }
-
-            // up
-            if (i >= 3) {
-                res += if (xmas(buf[i][j], buf[i - 1][j], buf[i - 2][j], buf[i - 3][j])) 1 else 0;
-            }
-
-            // down
-            if (i + 3 < n) {
-                res += if (xmas(buf[i][j], buf[i + 1][j], buf[i + 2][j], buf[i + 3][j])) 1 else 0;
             }
         }
     }
