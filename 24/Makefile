@@ -1,3 +1,6 @@
+4:
+	zig run 4.zig
+
 3:
 	./3.plx
 

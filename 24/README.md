@@ -10,6 +10,7 @@ The languages below the line are sorted (rougly) inversely w/r/t difficulty and 
 1. APL
 1. Haskell
 1. Perl
+1. Zig
 
 ---
 
@@ -22,7 +23,6 @@ The languages below the line are sorted (rougly) inversely w/r/t difficulty and 
 1. Julia
 1. Smalltalk
 1. OCaml
-1. Zig
 1. Go
 1. Kotlin
 1. Racket
