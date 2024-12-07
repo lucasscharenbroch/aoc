@@ -15,10 +15,10 @@ The languages below the line are sorted (rougly) inversely w/r/t difficulty and 
 1. Zig
 1. COBOL
 1. Go
+1. AWK
 
 ---
 
-1. AWK
 1. Bash
 1. Forth
 1. Prolog

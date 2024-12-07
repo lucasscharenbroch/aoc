@@ -1,3 +1,6 @@
+7:
+	cat 7.input | ./7.awk
+
 6:
 	go run 6.go
 
