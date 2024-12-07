@@ -1,3 +1,6 @@
+6:
+	go run 6.go
+
 5:
 	cobc -x 5.cbl # (gnu cobol)
 	./5
