@@ -1,3 +1,8 @@
+5:
+	cobc -x 5.cbl # (gnu cobol)
+	./5
+	rm 5
+
 4:
 	zig run 4.zig
 
