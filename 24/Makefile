@@ -1,3 +1,8 @@
+8:
+	gcc 8.c
+	./a.out
+	rm a.out
+
 7:
 	cat 7.input | ./7.awk
 

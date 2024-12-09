@@ -16,6 +16,7 @@ The languages below the line are sorted (rougly) inversely w/r/t difficulty and 
 1. COBOL
 1. Go
 1. AWK
+1. C
 
 ---
 
@@ -29,7 +30,6 @@ The languages below the line are sorted (rougly) inversely w/r/t difficulty and 
 1. Kotlin
 1. Racket
 1. Scala
-1. C
 1. Lua
 1. Ruby
 1. TypeScript
