@@ -4,6 +4,7 @@ import System.Exit (exitWith, ExitCode (..))
 import System.IO
 import Text.Read (readMaybe)
 import D1
+import D2
 
 argsToDay :: [String] -> Maybe Int
 argsToDay [x] = readMaybe x
@@ -17,7 +18,8 @@ panicWithMessage message = do
 solutions :: [(Int, String -> String)]
 solutions =
     [
-        (1, d1)
+        (1, d1),
+        (2, d2)
     ]
 
 main :: IO ()
