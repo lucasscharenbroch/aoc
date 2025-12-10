@@ -6,8 +6,8 @@ import Text.Read (readMaybe)
 import D1
 import D2
 import D3
--- import D4
--- import D5
+import D4
+import D5
 -- import D6
 -- import D7
 -- import D8
@@ -43,9 +43,9 @@ solutions =
     [
         (1, d1),
         (2, d2),
-        (3, d3)
---        (4, d4),
---        (5, d5),
+        (3, d3),
+        (4, d4),
+        (5, d5)
 --        (6, d6),
 --        (7, d7),
 --        (8, d8),
