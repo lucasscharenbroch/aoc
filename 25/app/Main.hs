@@ -9,7 +9,7 @@ import D3
 import D4
 import D5
 import D6
--- import D7
+import D7
 -- import D8
 -- import D9
 -- import D10
@@ -46,8 +46,8 @@ solutions =
         (3, d3),
         (4, d4),
         (5, d5),
-        (6, d6)
---        (7, d7)
+        (6, d6),
+        (7, d7)
 --        (8, d8)
 --        (9, d9)
 --        (10, d10)
