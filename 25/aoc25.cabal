@@ -62,13 +62,14 @@ executable aoc25
     main-is:          Main.hs
 
     -- Modules included in this executable, other than Main.
-    other-modules: Common, D1, D2, D3, D4, D5, D6, D7
+    other-modules: Common, D1, D2, D3, D4, D5, D6, D7, D8
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.17.2.1
+    build-depends:    base ^>=4.17.2.1,
+                      containers^>=0.6.7
 
     -- Directories containing source files.
     hs-source-dirs:   app

@@ -7,3 +7,6 @@ infixr 8 .:
 split :: Char -> String -> [String]
 split _ [] = []
 split c s = takeWhile (/=c) s : split c (drop 1 $ dropWhile (/=c) s)
+
+outerProduct :: (a -> b -> c) -> [a] -> [b] -> [[c]]
+outerProduct f as bs = [[f a b | b <- bs] | a <- as]

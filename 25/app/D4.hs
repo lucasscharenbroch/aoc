@@ -1,4 +1,5 @@
 module D4 where
+import Common
 
 -- succumb to indexing instead of rotation
 surroundingCoords :: Int -> Int -> (Int, Int) -> [(Int, Int)]
@@ -11,9 +12,6 @@ surroundingCoords n m (i, j) = [
 
 index2d :: [[a]] -> (Int, Int) -> a
 index2d matrix (i, j) = matrix !! i !! j
-
-outerProduct :: (a -> b -> c) -> [a] -> [b] -> [[c]]
-outerProduct f as bs = [[f a b | b <- bs] | a <- as]
 
 mask :: String -> [[Int]]
 mask = map (map (fromEnum . (==)'@')) . lines
